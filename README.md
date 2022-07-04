@@ -1,7 +1,5 @@
 # Route Planning Project
 
-This repo contains the starter code for the Route Planning project.
-
 ![Map](./resources/map.png "Map")
 
 ## Cloning
