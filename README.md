@@ -46,11 +46,11 @@ make
 ### Running
 The executable will be placed in the `build` directory. From within `build`, you can run the project as follows:
 ```
-./OSM_A_star_search
+./Route-Planning-Project
 ```
 Or to specify a map file:
 ```
-./OSM_A_star_search -f ../<your_osm_file.osm>
+./Route-Planning-Project -f ../<your_osm_file.osm>
 ```
 
 ## Testing
@@ -59,22 +59,8 @@ The testing executable is also placed in the `build` directory. From within `bui
 ```
 ./test
 ```
-
-## Troubleshooting
-* Some students have reported issues in cmake to find io2d packages, make sure you have downloaded [this](https://github.com/cpp-io2d/P0267_RefImpl/blob/master/BUILDING.md#xcode-and-libc).
-* For MAC Users cmake issues: Comment these lines from CMakeLists.txt under P0267_RefImpl
-    ```
-    if( NOT DEFINED IO2D_WITHOUT_SAMPLES )
-	     add_subdirectory(P0267_RefImpl/Samples)
-    endif()
-    ```
-    And then run "ALL_Build" and "install" in XCode.
-    
-    If any packages are missing try to install packages using 
-    ```
-    brew install pkg-config
-    ```
- * For Ubuntu Linux IO2D installation errors, follow the given steps:
+## Installing IO2D (for linux or windows)
+ * ### For Ubuntu Linux IO2D installation :
    ```
 	sudo apt update
 	sudo apt install build-essential
@@ -92,7 +78,7 @@ The testing executable is also placed in the `build` directory. From within `bui
 	sudo make install
    ```
      
- * If you are working on windows and unable to install IO2D:
+ * ### If you are working on windows and unable to install IO2D:
       * Enable WSL (Windows Subsystem for Linux) and use a distribution like [Ubuntu](https://ubuntu.com/wsl).(available from the windows store): 
       * Install the required dependencies (compiler, cmake etc.) in the WSL(as mentioned above for ubuntu)
       * Configure CLion to use the WSL [toolchain](https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-product.html#wsl-tooclhain)
@@ -100,6 +86,6 @@ The testing executable is also placed in the `build` directory. From within `bui
       * If you are still facing errors, visit this [link](https://github.com/udacity/CppND-Route-Planning-Project/issues/9).
      
 
-* If you are facing errors with --config try to remove -- from the command.
+* ### If you are facing errors with --config try to remove -- from the command.
 
 
